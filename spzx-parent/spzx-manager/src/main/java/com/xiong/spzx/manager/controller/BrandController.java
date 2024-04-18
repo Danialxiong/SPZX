@@ -8,6 +8,8 @@ import com.xiong.spzx.model.vo.common.ResultCodeEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @title BrandController
  * @description: TODO
@@ -64,5 +66,15 @@ public class BrandController {
     public Result deleteById(@PathVariable Long id) {
         brandService.deleteById(id);
         return Result.build(null , ResultCodeEnum.SUCCESS) ;
+    }
+
+    /**
+     * 查询所有
+     * @return 查询结果
+     */
+    @GetMapping("/findAll")
+    public Result findAll() {
+        List<Brand> list = brandService.findAll();
+        return Result.build(list , ResultCodeEnum.SUCCESS) ;
     }
 }

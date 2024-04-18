@@ -3,6 +3,8 @@ package com.xiong.spzx.manager.service;
 import com.github.pagehelper.PageInfo;
 import com.xiong.spzx.model.entity.product.Brand;
 
+import java.util.List;
+
 /**
  * @title BrandService
  * @description: TODO
@@ -17,4 +19,6 @@ public interface BrandService {
     void updateById(Brand brand);
 
     void deleteById(Long id);
+
+    List<Brand> findAll();
 }
