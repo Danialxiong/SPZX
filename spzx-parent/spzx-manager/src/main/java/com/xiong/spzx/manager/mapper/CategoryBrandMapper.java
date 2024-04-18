@@ -1,6 +1,7 @@
 package com.xiong.spzx.manager.mapper;
 
 import com.xiong.spzx.model.dto.product.CategoryBrandDto;
+import com.xiong.spzx.model.entity.product.Brand;
 import com.xiong.spzx.model.entity.product.CategoryBrand;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -22,5 +23,7 @@ public interface CategoryBrandMapper {
     public abstract void updateById(CategoryBrand categoryBrand);
 
     public abstract void deleteById(Long id);
+
+    public abstract List<Brand> findBrandByCategoryId(Long categoryId);
 
 }

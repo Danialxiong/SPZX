@@ -3,6 +3,8 @@ package com.xiong.spzx.manager.service;
 import com.github.pagehelper.PageInfo;
 import com.xiong.spzx.model.entity.product.ProductSpec;
 
+import java.util.List;
+
 /**
  * @title ProductSpecService
  * @description: TODO
@@ -18,4 +20,6 @@ public interface ProductSpecService {
     void updateById(ProductSpec productSpec);
 
     void deleteById(Long id);
+
+    List<ProductSpec> findAll();
 }

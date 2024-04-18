@@ -2,7 +2,10 @@ package com.xiong.spzx.manager.service;
 
 import com.github.pagehelper.PageInfo;
 import com.xiong.spzx.model.dto.product.CategoryBrandDto;
+import com.xiong.spzx.model.entity.product.Brand;
 import com.xiong.spzx.model.entity.product.CategoryBrand;
+
+import java.util.List;
 
 /**
  * @title CategoryBrandService
@@ -19,4 +22,6 @@ public interface CategoryBrandService {
     void updateById(CategoryBrand categoryBrand);
 
     void deleteById(Long id);
+
+    List<Brand> findBrandByCategoryId(Long categoryId);
 }
