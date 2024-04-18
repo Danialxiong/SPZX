@@ -111,6 +111,7 @@ public class SysMenuServiceImpl implements SysMenuService {
         SysUser sysUser = AuthContextUtil.get();
         Long userId = sysUser.getId();          // 获取当前登录用户的id
 
+        // 查询当前用户的菜单数据
         List<SysMenu> sysMenuList = sysMenuMapper.selectListByUserId(userId) ;
 
         //构建树形数据
