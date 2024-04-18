@@ -60,5 +60,12 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.4.3</version>
         </dependency>
+
+        <!-- minio -->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.5.9</version>
+        </dependency>
     </dependencies>
 </project>
